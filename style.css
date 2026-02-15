@@ -1,0 +1,238 @@
+/*ESTILOS GENERALES Y ENCABEZADO */
+
+header {
+    background-color: #3d0f03;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.logo {
+    height: 120px;
+    width: auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+/*FONDOS DE PÁGINA */
+
+#index,
+#menu,
+#ofertas {
+    background-image: url('resources/arroz.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/*CUADRÍCULA DE NAVEGACIÓN (GRID 1) */
+
+#grid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    max-width: 70%;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    color: white;
+    background-color: #3d0f03;
+    border-radius: 25px;
+}
+
+#grid1 a {
+    color: white;
+    text-decoration: none;
+}
+
+/*CUADRÍCULA DE FOTOS (GRID 2 - ÍNDICE) */
+
+#grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+    max-width: 70%;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    color: white;
+    background-image: url('resources/salmon.png');
+    background-size: cover;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#grid2 img {
+    max-width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    display: block;
+    border-radius: 15px;
+}
+
+#grid2 img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: 4px solid white;
+}
+
+/*fotos */
+.foto5 img {
+    max-width: 100%;
+    max-height: 120px;
+}
+
+
+/*PIE DE PÁGINA Y REDES SOCIALES */
+
+#redes-sociales {
+    background-color: #FFFA4C;
+    max-width: min(90%, 500px);
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 90px;
+    border-radius: 25px;
+    flex-wrap: wrap;
+}
+
+#redes-sociales a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#redes-sociales img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+
+/* MENÚ */
+
+#menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background-image: url('resources/salmon.png');
+    background-size: cover;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.menu-item {
+    background-color: #3d0f03;
+    color: white;
+    padding: 25px 20px;
+    border-radius: 15px;
+    border: 3px solid #FFFA4C;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 4px solid white;
+}
+
+.menu-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-item p {
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* OFERTAS */
+
+#ofertas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background-image: url('resources/salmon.png');
+    background-size: cover;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.oferta-item {
+    background-color: #FFFA4C;
+    color: #3d0f03;
+    padding: 25px 20px;
+    border-radius: 15px;
+    border: 3px solid #3d0f03;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.oferta-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    border: 4px solid white;
+}
+
+.oferta-item h3 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3d0f03;
+}
+
+.oferta-item .precio-original {
+    margin: 5px 0;
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #666;
+    opacity: 0.7;
+}
+
+.oferta-item .precio-oferta {
+    margin: 10px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #3d0f03;
+}
+
+.oferta-item .descuento {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    background-color: #3d0f03;
+    color: #FFFA4C;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
